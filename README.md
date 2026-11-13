@@ -129,3 +129,7 @@ Verity starts at €500 per month, excl. VAT, priced on the parts you use: Analy
 - [Book a demo](https://ask-verity.com)
 - [Pricing](https://ask-verity.com/pricing)
 - Questions: info@ask-verity.com
+
+## License
+
+The documentation in this repository is licensed under [Creative Commons Attribution 4.0 International](LICENSE). You may copy and adapt it, as long as you credit Verity and link to [ask-verity.com](https://ask-verity.com). The license covers the text in this repository. It does not cover the Verity name and logo, or the Verity product and its MCP server.
