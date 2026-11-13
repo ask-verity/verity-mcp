@@ -33,9 +33,24 @@ Audiences sync to Meta Ads, Google Ads, Brevo, Klaviyo and ActiveCampaign. Onsit
 
 You need a Verity account with MCP switched on. Verity enables MCP, and write access, per account.
 
-1. In Verity, open **Settings**, then **MCP Connections**. Copy the server address shown there.
-2. Add it to your assistant (see below).
-3. Sign in with Google, pick the account and workspace, and choose **read only** or **read and write**.
+1. Add the Verity server address to your assistant (see below): `https://app.ask-verity.com/api/mcp`
+2. Sign in with Google, pick the account and workspace, and choose **read only** or **read and write**.
+3. Ask in plain language.
+
+The same address is shown in Verity under **Settings**, then **MCP Connections**, where you also see what each connection did and can revoke it.
+
+Most clients that read a JSON configuration accept this:
+
+```json
+{
+  "mcpServers": {
+    "verity": {
+      "type": "http",
+      "url": "https://app.ask-verity.com/api/mcp"
+    }
+  }
+}
+```
 
 There are no API keys to create or store. Sign in runs over OAuth in your browser.
 
@@ -55,18 +70,18 @@ Add Verity to `.cursor/mcp.json` in your project, or to `~/.cursor/mcp.json` for
 {
   "mcpServers": {
     "verity": {
-      "url": "YOUR_VERITY_SERVER_ADDRESS"
+      "url": "https://app.ask-verity.com/api/mcp"
     }
   }
 }
 ```
 
-Replace `YOUR_VERITY_SERVER_ADDRESS` with the address from Settings, MCP Connections. Cursor opens the sign in screen the first time it connects.
+Then open **Cursor Settings**, then **MCP**, and click the server to sign in.
 
 ### Claude Code
 
 ```bash
-claude mcp add --transport http verity YOUR_VERITY_SERVER_ADDRESS
+claude mcp add --transport http verity https://app.ask-verity.com/api/mcp
 ```
 
 Then run `/mcp` inside Claude Code and choose Verity to sign in.
