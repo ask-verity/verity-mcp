@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.ask-verity/verity",
+  "title": "Verity",
+  "description": "Run your marketing data platform and CDP from an AI agent. A person approves what goes live.",
+  "version": "1.0.0",
+  "websiteUrl": "https://ask-verity.com/mcp",
+  "repository": {
+    "url": "https://github.com/ask-verity/verity-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://ask-verity.com/verity-logo.png",
+      "mimeType": "image/png"
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.ask-verity.com/api/mcp"
+    }
+  ]
+}
